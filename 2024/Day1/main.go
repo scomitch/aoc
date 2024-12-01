@@ -7,6 +7,7 @@ import (
 	"sort"
 	"strconv"
 	"strings"
+	"math"
 )
 
 func readFile(filename string) ([]string, error) {
@@ -63,11 +64,7 @@ func day1p1() (int, int) {
 	// Ensure the difference is not < 0
 	var differenceList []int
 	for i := 0; i < len(leftListSorted); i++ {
-		if rightListSorted[i]-leftListSorted[i] < 0 {
-			differenceList = append(differenceList, leftListSorted[i]-rightListSorted[i])
-		} else {
-			differenceList = append(differenceList, rightListSorted[i]-leftListSorted[i])
-		}
+		differenceList = append(differenceList, int(math.Abs(float64(leftListSorted[i]-rightListSorted[i]))))
 	}
 
 	fmt.Println(differenceList)
@@ -134,5 +131,5 @@ func day1p2() (int, int) {
 
 func main() {
 	day1p1()
-	day1p2()
+	//day1p2()
 }
