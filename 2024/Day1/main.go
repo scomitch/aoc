@@ -133,6 +133,6 @@ func day1p2() (int, int) {
 }
 
 func main() {
-	// day1p1()
+	day1p1()
 	day1p2()
 }
