@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"math"
 	"os"
 	"sort"
 	"strconv"
@@ -54,23 +55,11 @@ func day1p1() (int, int) {
 	sort.Ints(leftListSorted)
 	sort.Ints(rightListSorted)
 
-	// Size of each list
-	leftListSize := len(leftListSorted)
-	rightListSize := len(rightListSorted)
-	fmt.Println(leftListSize, rightListSize)
-
 	// Find the numbered difference between each index of the two lists
-	// Ensure the difference is not < 0
 	var differenceList []int
 	for i := 0; i < len(leftListSorted); i++ {
-		if rightListSorted[i]-leftListSorted[i] < 0 {
-			differenceList = append(differenceList, leftListSorted[i]-rightListSorted[i])
-		} else {
-			differenceList = append(differenceList, rightListSorted[i]-leftListSorted[i])
-		}
+		differenceList = append(differenceList, int(math.Abs(float64(leftListSorted[i]-rightListSorted[i]))))
 	}
-
-	fmt.Println(differenceList)
 
 	// Add all the numbers in the difference list together.
 	sum := 0
@@ -108,11 +97,6 @@ func day1p2() (int, int) {
 	sort.Ints(leftListSorted)
 	sort.Ints(rightListSorted)
 
-	// Size of each list
-	leftListSize := len(leftListSorted)
-	rightListSize := len(rightListSorted)
-	fmt.Println(leftListSize, rightListSize)
-
 	// Check first entry in left list, store number. Count how many times this number appears in the right list.
 	// Multiply left list value with count of right list value.
 	finalTotal := 0
@@ -134,5 +118,5 @@ func day1p2() (int, int) {
 
 func main() {
 	day1p1()
-	day1p2()
+	//day1p2()
 }
