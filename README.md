@@ -1,2 +1,2 @@
-# aoc
-Advent of Code
+# AoC
+Advent of Code. Learning and writing in Go.
