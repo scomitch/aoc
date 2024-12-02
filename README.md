@@ -16,7 +16,7 @@ Starting off in 2024, I'll be learning [Go]([https://adventofcode.com](https://g
 ## Progress
 | Year       | Total Stars 🌟 |
 |------------|---------------|
-| **2024**   | 🌟🌟         |
+| **2024**   | 🌟🌟🌟🌟         |
 | **2023**   | 🌟🌟          |
 | **2022**   | -            |
 | **2021**   | -            |
