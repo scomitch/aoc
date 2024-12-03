@@ -85,12 +85,10 @@ func day1p2() (int, int) {
 		}
 
 		if calculate {
-			num1, err1 := strconv.Atoi(strings.TrimSpace(numPair[0]))
-			num2, err2 := strconv.Atoi(strings.TrimSpace(numPair[1]))
-			if err1 == nil && err2 == nil {
-				fmt.Println(num1, num2, "< CALCD NUMBERS")
-				total += num1 * num2
-			}
+			first, _ := strconv.Atoi(numPair[0])
+			last, _ := strconv.Atoi(numPair[1])
+			fmt.Println(first, last, "< CALCD NUMBERS")
+			total += first * last
 		}
 	}
 
